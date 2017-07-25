@@ -1,23 +1,22 @@
 #include "Thread.h"
 #include "ThreadPoolExecutor.h"
-int i = 0;
 class Test :public Runnable {
 public:
 	~Test(){}
 	void Run() {
-		i++;
-		printf("hello! %d\n",i);
+		printf("hello!\n");
 	}
 };
 int main() {
 	CThreadPoolExecutor* pEx = new CThreadPoolExecutor();
-	pEx->Init(1, 10, 50);
+	pEx->Init(1, 10, 40);
 	Test t;
-	for (int i = 0; i < 100; i++)
+	for (int i = 0; i < 50; i++)
 	{
-		while (!pEx->Excute(&t))
-		{
-		}
+		//while (!pEx->Excute(&t))
+		//{
+		//}
+		pEx->Excute(&t);
 	}
 	pEx->Terminate();
 	delete pEx;
