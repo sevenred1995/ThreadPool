@@ -1,4 +1,6 @@
 #include "Thread.h"
+
+//Add One LQH
 CThread::CThread():
 	m_pRun(NULL),
 	m_bRun(false)
