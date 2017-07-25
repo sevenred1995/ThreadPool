@@ -1,8 +1,6 @@
 #include "Thread.h"
 
 //Add One LQH
-//new line in this dev
-//date:2017/07/25 name:lqh
 CThread::CThread():
 	m_pRun(NULL),
 	m_bRun(false)
